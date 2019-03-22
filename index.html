@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- load script file-->
+<script src="scripts/jquery.js" type="text/javascript"></script>
+<!--load css file -->
+<link rel=stylesheet href="scripts/css.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Project Two Game</title>
+</head>
+
+<body>   
+<embed height="100" width="100" src="BGM.mp3" />     
+<center><div id="wingame">
+<p>Congratulations! You are free Now ! Game will be Restart after you click play again</p>
+<p class="link"><a href="end.html">Play again</a>
+</div></center>
+
+<center><div id="killself" style="display:none;">
+<p> Unfortunately You are died ! </p>
+<p class="link"><a href="index.html">Play again</a>
+</div></center>
+
+<center><div id="foodpoisoning" style="display:none;">
+<p>Those food are poisonous and have died as a result.</p>
+<p class="link"><a href="index.html">Play again</a>
+</div></center>
+    <video width="320" height="240" align ="top" controls>
+  <source src="wellcome.mp4" type="video/mp4">
+</video>
+
+
+<div id="console">
+<!-- Tips for player know how to play this game-->
+<p id="message_begin">Welcome to ShiZhao's Project two game. If you dont understand how to play, you can always type "help" for a list of commands that you can use.</p>
+    
+<div id="compass"><img src="images/compass.jpg" /></div>
+<p id="message_help">Help: (replace italicized words)<br/>
+    
+take <i>item</i>: takes the item and puts it in to your inventory<br/>
+    
+eat <i>food</i>: eats indicated food item<br/>
+    
+kill <i>creature</i> with <i>item</i>: kills indicated creature with specified item<br/>
+    
+inventory: lists everything you are currently carrying<br/>
+    
+unlock <i>door</i> with <i>item</i>ex: unlocks jail door with the paper clip<br/>
+    
+go <i>direction</i>: the way you want to go (north, east, south, west)<br/>
+    
+search <i>item</i>: searches the indicated object for items</p>
+<!--
+9 Areas and commands user can use. 
+-->
+    
+<p id="area_main">
+  <img src="images/1.jpg"  width="500" height="333">  
+    You wake up and found out you sleep in an room you have never been it looks like a jail. You see a door at north. You tried to open it but it is locked. You looking around and found a lunch tray from the day's meal looks like dead bugs. A paper clip is on the tray too.
+  
+    </p>
+
+<p id="area_hallway">
+    <img src="images/2.jpg"  width="500" height="333">
+    You have entered a hallway. To the west and to the east are dark, and the south is where you just come from.   The only source of light is a torch hanging on the wall.You want to take it with you so you get closer. After you get near by the torch. You found a mysterious note. You can read it now.</p>
+
+<p id="area_torture">
+    <img src="images/3.png"  width="500" height="333">
+    You have entered a room looks like bigger the last one. After a quick observation, you found a table in the corner, a whip hanging on the wall and Strange devices hanging from walls and ceilings. There is a door at south.The west is where you came from.</p>
+
+<p id="area_farm">
+    <img src="images/4.jpg"  width="500" height="333">
+After you turning to suth, you begin to hear some noises. When you enter the room, you see a tiger there. Also he looks like hungry. 
+</p>
+
+<p id="area_westhall">
+    <img src="images/5.png"  width="500" height="333">
+    You moveing to west, you come upon a junction. North and South are some dark rooms. You came from the East.</p>
+
+<p id="area_exit">
+    <img src="images/6.jpg"  width="500" height="333">
+    You enter a room with a strange door. The door appears to lead somewhere, but it also looks locked. Upon closer inspection, you discover that a key is required to open it as you thought. To the south is where you came from.</p>
+
+<p id="area_bonus">
+    <img src="images/7.jpg"  width="500" height="333">
+    You enter a old room which looks like a storage. It is empty except for a crate in the corner. It looks like it hasn't been touched in years.</p>
+<p id="area_bonus2">
+    <img src="images/8.jpg"  width="500" height="333">
+    You meet a real servant from FGO, However he is evil you died.</p>   
+<p id="area_bonus3">
+    <img src="images/9.jpg"  width="500" height="333">
+    You meet a real servant from FGO. Lucky you are he is the face of Justice You are a real master NoW!</p>
+
+<p id="message_inventory">
+</p>
+<!--
+allows to content 
+-->
+<div id="placeholder"></div>
+
+</div>
+<!--
+user input 
+-->
+<form onsubmit="return false;">
+<center><input type="text" id="command_line" size="50" autofocus="autofocus" /></center>
+    
+  <!--
+    save user input which doing same thing by request "This time it will save the player's current room and the items in their backpack. "
+-->
+    <button onclick="save_data()" type="button">Save</button>
+    <script>
+    function saveData(){
+        localStorage.saveServer
+        }
+        </script>
+</form>
+</div>
+
+<p class="copyright"></p>
+
+<script type="text/javascript" src="scripts/game.js"></script>
+
+</body>
+
+</html>
