@@ -10,20 +10,23 @@
 </head>
 
 <body>   
-<embed height="100" width="100" src="BGM.mp3" />     
-<center><div id="wingame">
+<embed height="100" width="100" src="BGM.mp3" />    
+    
+<center><div id="wingame" style="display:none;">
+    
 <p>Congratulations! You are free Now ! Game will be Restart after you click play again</p>
 <p class="link"><a href="end.html">Play again</a>
+    
 </div></center>
 
 <center><div id="killself" style="display:none;">
 <p> Unfortunately You are died ! </p>
-<p class="link"><a href="index.html">Play again</a>
+<p class="link"><a href="end.html">Play again</a>
 </div></center>
 
 <center><div id="foodpoisoning" style="display:none;">
 <p>Those food are poisonous and have died as a result.</p>
-<p class="link"><a href="index.html">Play again</a>
+<p class="link"><a href="end.html">Play again</a>
 </div></center>
     <video width="320" height="240" align ="top" controls>
   <source src="wellcome.mp4" type="video/mp4">
@@ -34,7 +37,6 @@
 <!-- Tips for player know how to play this game-->
 <p id="message_begin">Welcome to ShiZhao's Project two game. If you dont understand how to play, you can always type "help" for a list of commands that you can use.</p>
     
-<div id="compass"><img src="images/compass.jpg" /></div>
 <p id="message_help">Help: (replace italicized words)<br/>
     
 take <i>item</i>: takes the item and puts it in to your inventory<br/>

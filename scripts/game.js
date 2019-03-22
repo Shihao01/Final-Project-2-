@@ -116,6 +116,7 @@ $(document).ready(function() {
 			else $('<p>You can\'t do that.</p>').insertBefore("#placeholder").fadeIn(1000);
 		
 		}
+      
 		//end take
 		
 		//search
@@ -141,10 +142,10 @@ $(document).ready(function() {
 			}
 			
 			//tager
-			else if (input == "search tager") {
-				if (currentroom == "farm" && tagerdead == true) {
+			else if (input == "search tiger") {
+				if (currentroom == "farm" && tigerdead == true) {
 					key = true;
-					$('<p>You found a key buried in the tager\'s flesh.</p>').insertBefore("#placeholder").fadeIn(1000);
+					$('<p>You found a key buried in the tiger\'s flesh.</p>').insertBefore("#placeholder").fadeIn(1000);
 				}
 				else $('<p>There is nothing to search for.</p>').insertBefore("#placeholder").fadeIn(1000);
 			}
@@ -206,7 +207,7 @@ $(document).ready(function() {
 			
 			//Tiger
 			else if (input == "kill Tiger with knife") {
-				if (currentroom == "Farm" && knife == true) {
+				if (currentroom == "farm" && knife == true) {
 					$('<p>You attack the Tiger with a knife and kill it! Just like a supermen ! </p>').insertBefore("#placeholder").fadeIn(1000);
 					tigerdead = true;
 				}
@@ -542,7 +543,7 @@ $(document).ready(function() {
 				}
 			}
                // go bones room 3 from exit room
-			 else if (input == "go north" && currentroom == "exit") {
+			 else if (input == "go east" && currentroom == "exit") {
 				if (beentobonus3 == true) {
 					if (powder == false) {
 						bonuscrate = "The lone crate in the corner looks untouched.";
@@ -550,7 +551,7 @@ $(document).ready(function() {
 					else {
 						bonuscrate = "";
 					}
-					$('<p>You are back in the storage room. You came from the south. ' + bonuscrate + '</p>').insertBefore("#placeholder").fadeIn(1000);
+					$('<p>You are back in the storage room. You came from the west. ' + bonuscrate + '</p>').insertBefore("#placeholder").fadeIn(1000);
 					currentroom = "bonus3";
 				}
 				else {
@@ -560,25 +561,21 @@ $(document).ready(function() {
 				}
 			}
             //go to exit room from bonus room 3
-			else if (input == "go south" && currentroom == "bonus3") {
+			else if (input == "go west" && currentroom == "bonus3") {
 					$('<p>You are back in the exit room.</p>').insertBefore("#placeholder").fadeIn(1000);
 					currentroom = "exit";
 			}
             
 			
-			//go through exit
 			else if (input == "go north" && currentroom == "exit") {
 				if (exitunlocked == true) {
-					$("#container").fadeOut(3000, function() {
-						$("#wingame").fadeIn(3000);                   
-					});
+					$('<p> You Free Now! click paly again to resert game</p><p class="link"><a href="end.html">Play again </a>').insertBefore("#placeholder").fadeIn(1000);
 				}
 				else {
 					$('<p>The door is locked.</p>').insertBefore("#placeholder").fadeIn(1000);
 				}
-			}		
-						
-			
+			}
+									
 			//go back to hallway from west hall
 			else if (input == "go east" && currentroom == "westhall") {
 				if (note == false) {
